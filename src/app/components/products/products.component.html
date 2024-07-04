@@ -1,0 +1,22 @@
+<div class="bg-gray-100">
+    <h1 class="justify-center flex flex-row p-2">Categorias</h1>
+    <nav class="flex flex-row justify-center mb-2 items-center mr-1">
+        <button mat-stroked-button (click)="filterCategory('electronics')" class="mr-1">Electronics</button>
+        <button mat-stroked-button  (click)="filterCategory('jewelery')" class="mr-1">Jewelery</button>
+        <button mat-stroked-button  (click)="filterCategory('men\'s clothing')" class="mr-1">men's clothing</button>
+        <button mat-stroked-button (click)="filterCategory('women\'s clothing')" class="mr-1">women's clothing</button>
+    </nav>
+    
+    <div>
+        <article class="flex justify-center flex-wrap">
+            <ul class="w-2/5 border-2 flex flex-wrap rounded m-1 hover:bg-pink-50" *ngFor="let product of products">
+                <img class="w-48 h-56 rounded-md" src="{{product.image}}" alt="">
+                <div class="p-4 text-base">
+                    <h1 class=" mb-2 text-base leading-tight">{{ product.title }}</h1>
+                    <span class="pr-2">${{ product.price }}</span>
+                    <button (click)="addCart(product)" class=" border border-black rounded-xl text-sm sm:h-10 px-2 hover:bg-customPink">Agregar al carrito</button>  
+                </div>
+            </ul>
+        </article>
+    </div>
+</div>
