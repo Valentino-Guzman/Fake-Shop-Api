@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         customPink: '#ffd9e1',
+        anotherPink: '#ba005c'
       }
     },
   },

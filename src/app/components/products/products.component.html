@@ -1,6 +1,7 @@
 <div class="bg-gray-100">
     <h1 class="justify-center flex flex-row p-2">Categorias</h1>
     <nav class="flex flex-row justify-center mb-2 items-center mr-1">
+        <button mat-button (click)="getProducts()">Todos los productos</button>
         <button mat-stroked-button (click)="filterCategory('electronics')" class="mr-1">Electronics</button>
         <button mat-stroked-button  (click)="filterCategory('jewelery')" class="mr-1">Jewelery</button>
         <button mat-stroked-button  (click)="filterCategory('men\'s clothing')" class="mr-1">men's clothing</button>
