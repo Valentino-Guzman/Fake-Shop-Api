@@ -11,5 +11,5 @@ import { FooterComponent } from "../footer/footer.component";
     imports: [HeaderComponent, ProductsComponent, FooterComponent]
 })
 export class HomeComponent {
-    backgroundcolor: boolean = false;
+
 }
