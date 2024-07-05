@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CartComponent } from "../cart/cart.component";
 import { CartIconComponent } from "../../icons/cart-icon/cart-icon.component";
 import { MatDialog } from '@angular/material/dialog';
-import { ShopServiceService } from '../../services/shop-service.service';
-import { CartItemsService } from '../../services/cart-items.service';
-
 @Component({
     selector: 'app-header',
     standalone: true,
@@ -24,5 +21,5 @@ export class HeaderComponent {
           height: '450px',
         });
       }
-   
+  
 }

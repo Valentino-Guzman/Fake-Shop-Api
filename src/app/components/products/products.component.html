@@ -1,23 +1,26 @@
 <div class="bg-gray-100">
-    <h1 class="justify-center flex flex-row p-2">Categorias</h1>
-    <nav class="flex flex-row justify-center mb-2 items-center mr-1">
-        <button mat-button (click)="getProducts()">Todos los productos</button>
-        <button mat-stroked-button (click)="filterCategory('electronics')" class="mr-1">Electronics</button>
-        <button mat-stroked-button  (click)="filterCategory('jewelery')" class="mr-1">Jewelery</button>
-        <button mat-stroked-button  (click)="filterCategory('men\'s clothing')" class="mr-1">men's clothing</button>
-        <button mat-stroked-button (click)="filterCategory('women\'s clothing')" class="mr-1">women's clothing</button>
+    <div class="flex justify-center py-4">
+      <h1 class="text-xl font-bold text-gray-800">Categorías</h1>
+    </div>
+    <nav class="flex justify-center mb-4 space-x-4">
+      <button (click)="getProducts()" class="text-gray-800 hover:text-pink-600 transition duration-300">Todos los productos</button>
+      <button (click)="filterCategory('electronics')" class="text-gray-800 hover:text-pink-600 transition duration-300">Electrónicos</button>
+      <button (click)="filterCategory('jewelery')" class="text-gray-800 hover:text-pink-600 transition duration-300">Joyería</button>
+      <button (click)="filterCategory('men\'s clothing')" class="text-gray-800 hover:text-pink-600 transition duration-300">Ropa para hombres</button>
+      <button (click)="filterCategory('women\'s clothing')" class="text-gray-800 hover:text-pink-600 transition duration-300">Ropa para mujeres</button>
     </nav>
     
-    <div>
-        <article class="flex justify-center flex-wrap">
-            <ul class="w-2/5 border-2 flex flex-wrap rounded m-1 hover:bg-pink-50" *ngFor="let product of products">
-                <img class="w-48 h-56 rounded-md" src="{{product.image}}" alt="">
-                <div class="p-4 text-base">
-                    <h1 class=" mb-2 text-base leading-tight">{{ product.title }}</h1>
-                    <span class="pr-2">${{ product.price }}</span>
-                    <button (click)="addCart(product)" class=" border border-black rounded-xl text-sm sm:h-10 px-2 hover:bg-customPink">Agregar al carrito</button>  
+    <div class="flex justify-center flex-wrap">
+        <div class="w-full sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2" *ngFor="let product of products">
+            <article class="border rounded-lg overflow-hidden hover:shadow-lg">
+                <img class="w-full h-64 " src="{{ product.image }}" alt="{{ product.title }}">
+                <div class="p-4">
+                    <h1 class="text-lg font-bold mb-2">{{ product.title }}</h1>
+                    <p class="text-gray-800 text-sm mb-2">${{ product.price }}</p>
+                    <button (click)="addCart(product)" class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full w-full">Agregar al carrito</button>
                 </div>
-            </ul>
-        </article>
+            </article>
+        </div>
     </div>
+    
 </div>

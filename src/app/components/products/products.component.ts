@@ -40,8 +40,7 @@ export class ProductsComponent implements OnInit {
   filterCategory(category:string){
     this.shopserviceService.getCategories(category).subscribe((data:any) => {
       this.products = data; 
-      console.log(this.products)
-    })
+    });
   }
 
 }
