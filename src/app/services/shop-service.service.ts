@@ -20,5 +20,8 @@ export class ShopServiceService {
     return this.httpClient.get<string>(`${this.APIurl}products/category/${category}`);
   }
 
-  
+  getProduct(id:number): Observable<Product> {
+    return this.httpClient.get<Product>(`${this.APIurl}products/${id}`);
+  }
+    
 }

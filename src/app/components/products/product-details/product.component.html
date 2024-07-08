@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div *ngIf="product" class="flex justify-center">
+   <div class="w-full p-2">
+     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+       <article class="flex">
+         <img class="w-52 h-52 " src="{{ product.image }}" alt="{{ product.title }}">
+         <div class="p-4">
+           <h1 class="text-xl font-semibold">{{ product.title }}</h1>
+           <p class="text-gray-600 mt-2 mb-2">{{ product.description }}</p>
+           <p class="text-gray-700">${{ product.price }}</p>
+           <div class="flex m-2">
+              <p class="text-pink-300 font-bold">Puntuación: {{ product.rating.rate }}</p>
+              <app-star-icon class="ml-1"/>
+           </div>
+           <button (click)="addCart(product)" class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full w-52">Agregar al carrito</button>
+         </div>
+       </article>
+     </div>
+   </div>
+ </div>
+ 

@@ -2,17 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import { ShopServiceService } from '../../services/shop-service.service';
 import { Product } from '../../interfaces/product';
 import { NgFor } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 import { CartItemsService } from '../../services/cart-items.service';
-import { CartIconComponent } from "../../icons/cart-icon/cart-icon.component";
 import { HeaderComponent } from "../header/header.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-products',
     standalone: true,
     templateUrl: './products.component.html',
     styleUrl: './products.component.css',
-    imports: [NgFor, MatButtonModule, CartIconComponent, HeaderComponent]
+    imports: [NgFor, HeaderComponent, RouterLink]
 })
 export class ProductsComponent implements OnInit {
 
@@ -39,7 +38,7 @@ export class ProductsComponent implements OnInit {
 
   filterCategory(category:string){
     this.shopserviceService.getCategories(category).subscribe((data:any) => {
-      this.products = data; 
+      this.products = data;   
     });
   }
 
