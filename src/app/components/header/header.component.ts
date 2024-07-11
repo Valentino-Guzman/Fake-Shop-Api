@@ -17,8 +17,8 @@ export class HeaderComponent {
     
     showCart() {
         this.matdialog.open(CartComponent, {
-          width: '500px',
-          height: '450px',
+          width: '600px',
+          height: '500px',
         });
       }
   

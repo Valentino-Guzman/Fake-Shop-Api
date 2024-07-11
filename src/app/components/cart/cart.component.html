@@ -7,7 +7,10 @@
       <div class="flex flex-col p-4 text-base">
           <h1 class=" mb-2">{{ cartItem.title }} </h1>
           <span class="pr-2"> ${{ cartItem.price }}</span>
-          <button class="rounded text-white bg-pink-400 hover:bg-pink-500" (click)="removeItem(cartItem.id)">Eliminar</button>
-      </div>
-    </ul>
+          <button class="rounded text-white bg-purple-400 hover:bg-purple-500" (click)="removeItem(cartItem.id)">Eliminar</button>
+        </div>
+      </ul>
+    <div class="flex flex-col justify-end" *ngIf="cartItems.length != 0">
+      <button class="text-purple-800 hover:text-purple-600 transition duration-300"><a href="payment">Pagar</a></button>
+    </div>
   </div>

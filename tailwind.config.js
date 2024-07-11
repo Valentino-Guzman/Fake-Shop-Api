@@ -5,12 +5,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: 'Ubuntu',
+        secondaty: 'Jost'
+      },
+
       colors: {
         customPink: '#ffd9e1',
         anotherPink: '#ba005c'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated'),
+  ],
 }
 

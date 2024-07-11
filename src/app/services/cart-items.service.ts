@@ -21,7 +21,7 @@ export class CartItemsService {
   }
 
   removeCartItem(productId:number): void {
-  this.cartItems = this.cartItems.filter(product => product.id !== productId)
-
+  this.cartItems = this.cartItems.filter(product => product.id !== productId);
   }
+  
 }

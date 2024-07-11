@@ -1,24 +1,25 @@
+<app-header></app-header>
 <div class="bg-gray-100">
     <div class="flex justify-center py-4">
-      <h1 class="text-xl font-bold text-gray-800">Categorías</h1>
+      <h1 class="text-xl font-bold text-purple-800">Categorías</h1>
     </div>
     <nav class="flex justify-center mb-4 space-x-4">
-      <button (click)="getProducts()" class="text-gray-800 hover:text-pink-600 transition duration-300">Todos los productos</button>
-      <button (click)="filterCategory('electronics')" class="text-gray-800 hover:text-pink-600 transition duration-300">Electrónicos</button>
-      <button (click)="filterCategory('jewelery')" class="text-gray-800 hover:text-pink-600 transition duration-300">Joyería</button>
-      <button (click)="filterCategory('men\'s clothing')" class="text-gray-800 hover:text-pink-600 transition duration-300">Ropa para hombres</button>
-      <button (click)="filterCategory('women\'s clothing')" class="text-gray-800 hover:text-pink-600 transition duration-300">Ropa para mujeres</button>
+      <button (click)="getProducts()" class="text-purple-800 hover:text-purple-600 transition duration-300">Todos los productos</button>
+      <button (click)="filterCategory('electronics')" class="text-purple-800 hover:text-purple-600 transition duration-300">Electrónicos</button>
+      <button (click)="filterCategory('jewelery')" class="text-purple-800 hover:text-purple-600 transition duration-300">Joyería</button>
+      <button (click)="filterCategory('men\'s clothing')" class="text-purple-800 hover:text-purple-600 transition duration-300">Ropa para hombres</button>
+      <button (click)="filterCategory('women\'s clothing')" class="text-purple-800 hover:text-purple-600 transition duration-300">Ropa para mujeres</button>
     </nav>
     
     <div class="flex justify-center flex-wrap">
         <div class="w-full sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 p-2" *ngFor="let product of products">
-            <article class="border rounded-lg overflow-hidden hover:shadow-lg">
-                <img class="w-full h-64 " src="{{ product.image }}" alt="{{ product.title }}">
+            <article class="border rounded-lg overflow-hidden hover:shadow-lg animate-fade">
+                <img class="w-full h-64" src="{{ product.image }}" alt="{{ product.title }}">
                 <div class="p-4">
                     <h1 class="text-lg font-bold mb-2">{{ product.title }}</h1>
                     <p class="text-gray-800 text-base mb-2">${{ product.price }}</p>
-                    <button (click)="addCart(product)" class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-full w-full">Agregar al carrito</button>
-                    <a routerLink="/products/{{product.id}}" class="block text-center text-gray-800 hover:text-pink-600 transition duration-300 mt-2">Ver más</a>               
+                    <button (click)="addCart(product)" class="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full w-full">Agregar al carrito</button>
+                    <a routerLink="/products/{{product.id}}" class="block text-center text-gray-800 hover:text-purple-600 transition duration-300 mt-2">Ver más</a>               
                 </div>
             </article>
         </div>
